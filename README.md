@@ -1,0 +1,1 @@
+# Yialo's Stylelint configuration
