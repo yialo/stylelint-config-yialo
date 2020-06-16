@@ -1,0 +1,30 @@
+{
+  "author": "Aleksei Arro <polsck@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/yialo/stylelint-config-yialo/issues"
+  },
+  "description": "Yialo's Stylelint config",
+  "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
+  "keywords": [
+    "check",
+    "checker",
+    "code style",
+    "code",
+    "lint",
+    "linter",
+    "quality",
+    "strict",
+    "style",
+    "stylelint",
+    "validate",
+    "verify"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "stylelint-config-yialo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yialo/stylelint-config-yialo.git"
+  },
+  "version": "0.0.1"
+}
