@@ -1,7 +1,12 @@
 'use strict';
 
-const rules = require('./rules.json');
+const { rules: baseRules } = require('./base.js');
+const { rules: scssRules } = require('./scss.js');
 
 module.exports = {
-  rules,
+  plugins: ['stylelint-scss'],
+  rules: {
+    ...baseRules,
+    ...scssRules,
+  },
 };
