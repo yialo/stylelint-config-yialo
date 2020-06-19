@@ -40,4 +40,7 @@ If you've installed `stylelint-config-yialo` locally within your project, declar
     }
     ```
   
-This package includes [stylelint-scss](https://github.com/kristerkari/stylelint-scss) plugin as an internal dependency. You do not need to install this plugin to use its rules if you want to extend/override ruleset represented here.
+Notice that this package requires next ones as peer dependencies:
+
+* [stylelint](https://www.npmjs.com/package/stylelint)
+* [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)
