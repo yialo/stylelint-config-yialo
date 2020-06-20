@@ -1,5 +1,12 @@
 # Yialo's Stylelint configuration
 
+All-in-one package for linting styles. It includes these ones out-of-box:
+
+* [stylelint](https://www.npmjs.com/package/stylelint)
+* [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)
+
+To prevent inconsistency of dependencies, you SHOULD NOT install these packages by yourself.
+
 ## Installation
 
 ```shell
@@ -39,8 +46,3 @@ If you've installed `stylelint-config-yialo` locally within your project, declar
       "extends": "stylelint-config-yialo/scss"
     }
     ```
-  
-Notice that this package requires next ones as peer dependencies:
-
-* [stylelint](https://www.npmjs.com/package/stylelint)
-* [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)
