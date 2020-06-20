@@ -10,9 +10,12 @@
     "checker",
     "code style",
     "code",
+    "css",
     "lint",
     "linter",
     "quality",
+    "sass",
+    "scss",
     "strict",
     "style",
     "stylelint",
@@ -30,6 +33,5 @@
     "type": "git",
     "url": "git+https://github.com/yialo/stylelint-config-yialo.git"
   },
-  "version": "0.1.2",
-  "dependencies": {}
+  "version": "0.1.2"
 }
