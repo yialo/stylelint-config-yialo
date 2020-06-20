@@ -5,6 +5,8 @@ All-in-one package for linting styles. It includes these ones out-of-box:
 * [stylelint](https://www.npmjs.com/package/stylelint)
 * [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)
 
+To prevent inconsistency of dependencies, you SHOULD NOT install these packages by yourself.
+
 ## Installation
 
 ```shell
