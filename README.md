@@ -44,3 +44,9 @@ Notice that this package requires next ones as peer dependencies:
 
 * [stylelint](https://www.npmjs.com/package/stylelint)
 * [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)
+
+You may install them quickly with this command:
+
+```shell
+npm install -DE stylelint stylelint-scss
+```
