@@ -3,10 +3,6 @@
   "bugs": {
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
   },
-  "dependencies": {
-    "stylelint": "13.6.1",
-    "stylelint-scss": "3.18.0"
-  },
   "description": "Yialo's Stylelint config",
   "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
   "keywords": [
@@ -29,6 +25,10 @@
   "license": "MIT",
   "main": "index.js",
   "name": "stylelint-config-yialo",
+  "peerDependencies": {
+    "stylelint": "^13.6.1",
+    "stylelint-scss": "^3.18.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yialo/stylelint-config-yialo.git"
