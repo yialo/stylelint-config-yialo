@@ -47,6 +47,28 @@ Notice that this package requires next ones as peer dependencies:
 
 You may install them quickly with this command:
 
-```shell
-npm install -DE stylelint stylelint-scss
-```
+* npm
+
+  ```shell
+  npm install -DE stylelint stylelint-scss
+  ```
+
+* yarn
+
+  ```shell
+  yarn add stylelint stylelint-scss -DE
+  ```
+
+Command for quick removal of them:
+
+* npm
+
+  ```shell
+  npm uninstall -D stylelint stylelint-scss
+  ```
+
+* yarn
+
+  ```shell
+  yarn remove stylelint stylelint-scss -D
+  ```
