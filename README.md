@@ -16,30 +16,12 @@ This package contains three different rulesets for [Stylelint](https://github.co
 
 * `base`: for plain CSS and CSS Modules
 * `scss`: for SCSS syntax only
-* `full`: both of previous ones
 
-If you've installed `stylelint-config-yialo` locally within your project, declare your stylelint config extension:
+If you've installed `stylelint-config-yialo` locally within your project, declare your stylelint config extension. Example of full ruleset usage:
 
-* For full ruleset use:
-
-    ```json
-    {
-      "extends": "stylelint-config-yialo"
-    }
-    ```
-
-* For base ruleset use:
-
-    ```json
-    {
-      "extends": "stylelint-config-yialo/base"
-    }
-    ```
-
-* For SCSS-only ruleset use:
-
-    ```json
-    {
-      "extends": "stylelint-config-yialo/scss"
-    }
-    ```
+```yaml
+---
+extends:
+  - stylelint-config-yialo/base
+  - stylelint-config-yialo/scss
+```

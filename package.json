@@ -27,7 +27,7 @@
     "verify"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "base.js",
   "name": "stylelint-config-yialo",
   "repository": {
     "type": "git",
