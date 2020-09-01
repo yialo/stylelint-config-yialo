@@ -33,5 +33,5 @@
     "type": "git",
     "url": "git+https://github.com/yialo/stylelint-config-yialo.git"
   },
-  "version": "0.1.6"
+  "version": "0.2.0"
 }
