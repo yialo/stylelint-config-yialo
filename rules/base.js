@@ -57,7 +57,7 @@ module.exports.rules = {
   'function-comma-space-before': 'never',
   'function-linear-gradient-no-nonstandard-direction': true,
   'function-max-empty-lines': 0,
-  'function-name-case': 'lower',
+  'function-name-case': null,
   'function-parentheses-space-inside': 'never-single-line',
   'function-url-quotes': 'always',
   'function-whitespace-after': 'always',
