@@ -4,7 +4,7 @@
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
   },
   "dependencies": {
-    "stylelint": "13.7.2",
+    "stylelint": "13.8.0",
     "stylelint-scss": "3.18.0"
   },
   "description": "Yialo's Stylelint config",
