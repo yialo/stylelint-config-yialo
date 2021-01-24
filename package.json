@@ -4,27 +4,20 @@
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
   },
   "dependencies": {
-    "stylelint": "13.8.0",
+    "stylelint": "13.9.0",
     "stylelint-scss": "3.18.0"
   },
   "description": "Yialo's Stylelint config",
   "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
   "keywords": [
-    "check",
-    "checker",
-    "code style",
-    "code",
     "css",
     "lint",
     "linter",
     "quality",
     "sass",
     "scss",
-    "strict",
     "style",
-    "stylelint",
-    "validate",
-    "verify"
+    "stylelint"
   ],
   "license": "MIT",
   "main": "base.js",
@@ -33,5 +26,5 @@
     "type": "git",
     "url": "git+https://github.com/yialo/stylelint-config-yialo.git"
   },
-  "version": "0.2.2"
+  "version": "0.2.3"
 }
