@@ -1,11 +1,13 @@
 {
+  "name": "stylelint-config-yialo",
+  "version": "0.2.4",
   "author": "Aleksei Arro <polsck@gmail.com>",
   "bugs": {
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
   },
   "dependencies": {
     "stylelint": "13.9.0",
-    "stylelint-scss": "3.18.0"
+    "stylelint-scss": "3.19.0"
   },
   "description": "Yialo's Stylelint config",
   "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
@@ -21,10 +23,8 @@
   ],
   "license": "MIT",
   "main": "base.js",
-  "name": "stylelint-config-yialo",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yialo/stylelint-config-yialo.git"
-  },
-  "version": "0.2.3"
+  }
 }
