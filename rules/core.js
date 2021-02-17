@@ -46,6 +46,7 @@ module.exports.rules = {
   'custom-property-pattern': null,
   'declaration-bang-space-after': 'never',
   'declaration-bang-space-before': 'always',
+  'declaration-block-no-duplicate-custom-properties': true,
   'declaration-block-no-duplicate-properties': [
     true,
     {
