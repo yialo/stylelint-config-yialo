@@ -125,6 +125,7 @@ module.exports.rules = {
   'media-query-list-comma-newline-before': 'never-multi-line',
   'media-query-list-comma-space-after': 'always-single-line',
   'media-query-list-comma-space-before': 'never-single-line',
+  'named-grid-areas-no-invalid': true,
   'no-descending-specificity': null,
   'no-duplicate-at-import-rules': true,
   'no-duplicate-selectors': true,
