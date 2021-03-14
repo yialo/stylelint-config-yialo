@@ -1,12 +1,12 @@
 {
   "name": "stylelint-config-yialo",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "author": "Aleksei Arro <polsck@gmail.com>",
   "bugs": {
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
   },
   "dependencies": {
-    "stylelint": "13.11.0",
+    "stylelint": "13.12.0",
     "stylelint-scss": "3.19.0"
   },
   "description": "Yialo's Stylelint config",
