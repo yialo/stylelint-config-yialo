@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-yialo",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "author": "Aleksei Arro <polsck@gmail.com>",
   "bugs": {
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
