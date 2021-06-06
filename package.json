@@ -13,12 +13,9 @@
   "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
   "keywords": [
     "css",
-    "lint",
     "linter",
-    "quality",
     "sass",
     "scss",
-    "style",
     "stylelint"
   ],
   "license": "MIT",
