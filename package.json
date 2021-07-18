@@ -7,18 +7,15 @@
   },
   "dependencies": {
     "stylelint": "13.13.1",
-    "stylelint-scss": "3.19.0"
+    "stylelint-scss": "3.20.0"
   },
   "description": "Yialo's Stylelint config",
   "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
   "keywords": [
     "css",
-    "lint",
     "linter",
-    "quality",
     "sass",
     "scss",
-    "style",
     "stylelint"
   ],
   "license": "MIT",
