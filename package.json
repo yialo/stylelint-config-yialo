@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "stylelint": "13.13.1",
-    "stylelint-scss": "3.20.1"
+    "stylelint-scss": "3.21.0"
   },
   "description": "Yialo's Stylelint config",
   "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
