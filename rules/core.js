@@ -77,7 +77,6 @@ module.exports.rules = {
   'font-family-no-missing-generic-family-keyword': true,
   'font-weight-notation': 'numeric',
   'function-allowed-list': null,
-  'function-calc-no-invalid': null,
   'function-calc-no-unspaced-operator': true,
   'function-comma-newline-after': 'always-multi-line',
   'function-comma-newline-before': 'never-multi-line',

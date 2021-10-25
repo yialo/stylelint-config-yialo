@@ -6,8 +6,10 @@
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
   },
   "dependencies": {
-    "stylelint": "13.13.1",
-    "stylelint-scss": "3.21.0"
+    "postcss": "8.3.11",
+    "postcss-scss": "4.0.1",
+    "stylelint": "14.0.0",
+    "stylelint-scss": "4.0.0"
   },
   "description": "Yialo's Stylelint config",
   "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
