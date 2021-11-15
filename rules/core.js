@@ -50,6 +50,9 @@ module.exports.rules = {
   'declaration-block-no-duplicate-properties': [
     true,
     {
+      ignore: [
+        'consecutive-duplicates-with-different-values'
+      ],
       ignoreProperties: [
         'composes'
       ]
