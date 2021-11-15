@@ -156,6 +156,7 @@ module.exports.rules = {
       ]
     }
   ],
+  'rule-selector-property-disallowed-list': null,
   'selector-attribute-brackets-space-inside': 'never',
   'selector-attribute-name-disallowed-list': null,
   'selector-attribute-operator-allowed-list': null,
