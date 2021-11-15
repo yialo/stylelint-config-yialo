@@ -17,10 +17,8 @@ module.exports.rules = {
   'block-closing-brace-newline-after': [
     'always',
     {
-      ignoreAtRules: [
-        'if'
-      ]
-    }
+      ignoreAtRules: ['if'],
+    },
   ],
   'block-closing-brace-newline-before': 'always',
   'block-closing-brace-space-after': 'always-single-line',
@@ -50,13 +48,9 @@ module.exports.rules = {
   'declaration-block-no-duplicate-properties': [
     true,
     {
-      ignore: [
-        'consecutive-duplicates-with-different-values'
-      ],
-      ignoreProperties: [
-        'composes'
-      ]
-    }
+      ignore: ['consecutive-duplicates-with-different-values'],
+      ignoreProperties: ['composes'],
+    },
   ],
   'declaration-block-no-redundant-longhand-properties': null,
   'declaration-block-no-shorthand-property-overrides': true,
@@ -97,18 +91,16 @@ module.exports.rules = {
   'function-url-scheme-disallowed-list': null,
   'function-whitespace-after': 'always',
   'hue-degree-notation': null,
-  'indentation': [
+  indentation: [
     2,
     {
-      ignore: [
-        'inside-parens'
-      ]
-    }
+      ignore: ['inside-parens'],
+    },
   ],
   'keyframe-declaration-no-important': true,
   'keyframes-name-pattern': null,
   'length-zero-no-unit': true,
-  'linebreaks': null,
+  linebreaks: null,
   'max-empty-lines': 1,
   'max-line-length': null,
   'max-nesting-depth': null,
@@ -151,13 +143,9 @@ module.exports.rules = {
   'rule-empty-line-before': [
     'always',
     {
-      except: [
-        'first-nested'
-      ],
-      ignore: [
-        'after-comment'
-      ]
-    }
+      except: ['first-nested'],
+      ignore: ['after-comment'],
+    },
   ],
   'rule-selector-property-disallowed-list': null,
   'selector-attribute-brackets-space-inside': 'never',
@@ -198,11 +186,8 @@ module.exports.rules = {
   'selector-pseudo-class-no-unknown': [
     true,
     {
-      ignorePseudoClasses: [
-        'global',
-        'local'
-      ]
-    }
+      ignorePseudoClasses: ['global', 'local'],
+    },
   ],
   'selector-pseudo-class-parentheses-space-inside': 'never',
   'selector-pseudo-element-allowed-list': null,
@@ -224,10 +209,8 @@ module.exports.rules = {
   'value-keyword-case': [
     'lower',
     {
-      ignoreProperties: [
-        'composes'
-      ]
-    }
+      ignoreProperties: ['composes'],
+    },
   ],
   'value-list-comma-newline-after': 'always-multi-line',
   'value-list-comma-newline-before': 'never-multi-line',
