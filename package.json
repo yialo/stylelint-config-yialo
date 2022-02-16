@@ -25,5 +25,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yialo/stylelint-config-yialo.git"
+  },
+  "scripts": {
+    "compare-rules": "node ./fixtures/compare-rule-lists.js"
   }
 }
