@@ -85,7 +85,7 @@ module.exports.rules = {
   'function-linear-gradient-no-nonstandard-direction': true,
   'function-max-empty-lines': 0,
   'function-name-case': null,
-  'function-no-unknown': true,
+  'function-no-unknown': null,
   'function-parentheses-newline-inside': null,
   'function-parentheses-space-inside': 'never-single-line',
   'function-url-no-scheme-relative': null,
