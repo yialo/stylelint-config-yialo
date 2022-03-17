@@ -1,5 +1,7 @@
 'use strict';
 
+const coreRules = require('./core.js').rules;
+
 module.exports.rules = {
   'scss/at-each-key-value-single-line': null,
   'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
@@ -43,6 +45,7 @@ module.exports.rules = {
   'scss/double-slash-comment-inline': null,
   'scss/double-slash-comment-whitespace-inside': null,
   'scss/function-color-relative': null,
+  'scss/function-no-unknown': coreRules['function-no-unknown'],
   'scss/function-quote-no-quoted-strings-inside': null,
   'scss/function-unquote-no-unquoted-strings-inside': null,
   'scss/map-keys-quotes': null,
