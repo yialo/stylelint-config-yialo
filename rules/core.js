@@ -67,6 +67,7 @@ module.exports.rules = {
   'declaration-colon-space-before': 'never',
   'declaration-empty-line-before': null,
   'declaration-no-important': null,
+  'declaration-property-max-values': null,
   'declaration-property-unit-allowed-list': null,
   'declaration-property-unit-disallowed-list': null,
   'declaration-property-value-allowed-list': null,
