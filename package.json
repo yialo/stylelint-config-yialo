@@ -8,7 +8,7 @@
   "dependencies": {
     "postcss": "8.4.12",
     "postcss-scss": "4.0.3",
-    "stylelint": "14.6.0",
+    "stylelint": "14.6.1",
     "stylelint-scss": "4.2.0"
   },
   "description": "Yialo's Stylelint config",
