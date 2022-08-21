@@ -104,7 +104,12 @@ module.exports.rules = {
   'keyframe-block-no-duplicate-selectors': true,
   'keyframe-declaration-no-important': true,
   'keyframes-name-pattern': null,
-  'length-zero-no-unit': true,
+  'length-zero-no-unit': [
+    true,
+    {
+      ignore: 'custom-properties',
+    }
+  ],
   linebreaks: null,
   'max-empty-lines': 1,
   'max-line-length': null,
