@@ -6,8 +6,8 @@
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
   },
   "peerDependencies": {
-    "postcss": "^8.4.13",
-    "postcss-scss": "^4.0.4",
+    "postcss": "^8.4.21",
+    "postcss-scss": "^4.0.6",
     "stylelint": "^14.8.2",
     "stylelint-scss": "^4.2.0"
   },
