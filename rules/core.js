@@ -2,6 +2,7 @@
 
 module.exports.rules = {
   'alpha-value-notation': null,
+  'annotation-no-unknown': true,
   'at-rule-allowed-list': null,
   'at-rule-disallowed-list': null,
   'at-rule-empty-line-before': null,
@@ -95,6 +96,7 @@ module.exports.rules = {
   'function-url-scheme-disallowed-list': null,
   'function-whitespace-after': 'always',
   'hue-degree-notation': null,
+  'import-notation': null,
   indentation: [
     2,
     {
@@ -104,6 +106,7 @@ module.exports.rules = {
   'keyframe-block-no-duplicate-selectors': true,
   'keyframe-declaration-no-important': true,
   'keyframes-name-pattern': null,
+  'keyframe-selector-notation': null,
   'length-zero-no-unit': [
     true,
     {
@@ -123,6 +126,7 @@ module.exports.rules = {
   'media-feature-name-no-vendor-prefix': true,
   'media-feature-name-value-allowed-list': null,
   'media-feature-parentheses-space-inside': 'never',
+  'media-feature-range-notation': null,
   'media-feature-range-operator-space-after': 'always',
   'media-feature-range-operator-space-before': 'always',
   'media-query-list-comma-newline-after': 'always-multi-line',
