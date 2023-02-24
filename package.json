@@ -27,7 +27,7 @@
     "url": "git+https://github.com/yialo/stylelint-config-yialo.git"
   },
   "scripts": {
-    "compare-rules": "node ./fixtures/compare-rule-lists.js",
+    "check-rules": "node ./fixtures/compare-rule-lists.js",
     "test-css": "stylelint --config base.js fixtures/test-bed.css",
     "test-scss": "stylelint --config scss.js fixtures/test-bed.scss"
   }

@@ -41,7 +41,7 @@ const compareRuleLists = ({ myRules, referenceRules }, pluginName) => {
     deprecatedReferenceRuleNames.includes(ruleName)
   );
 
-  console.group(pluginName);
+  console.group('plugin:', pluginName);
   console.log('missedRuleNames', missedRuleNames);
   console.log('extraneousRuleNames', extraneousRuleNames);
   console.log('deprecatedRuleNames', deprecatedRuleNames);
