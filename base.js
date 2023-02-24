@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const { rules } = require('./rules/core');
+const { rules } = require("./rules/core");
 
 module.exports = {
   reportInvalidScopeDisables: true,

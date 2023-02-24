@@ -1,34 +1,65 @@
 'use strict';
 
-const { rules: referenceCoreRules } = require('stylelint');
-const { default: referenceScssRules } = require('stylelint-scss');
+const { rules: referenceCoreRules_raw } = require('stylelint');
+const { default: referenceScssRules_raw } = require('stylelint-scss');
 
-const { rules: myCoreRules } = require('../rules/core');
-const { rules: myScssRules } = require('../rules/scss');
+const { rules: myCoreRules_raw } = require('../rules/core');
+const { rules: myScssRules_raw } = require('../rules/scss');
 
-const compareRuleLists = ({ myRuleNames, referenceRuleNames }, pluginName) => {
-  const missedRuleNames = referenceRuleNames.filter((ruleName) => !myRuleNames.includes(ruleName));
+const referenceCoreRules = Object.keys(referenceCoreRules_raw).map(
+  (ruleName) => {
+    const ruleFilePath = require.resolve(`stylelint/lib/rules/${ruleName}`);
+    return require(ruleFilePath);
+  }
+);
+const referenceScssRules = referenceScssRules_raw.map(({ rule }) => rule);
 
-  const extraneousRuleNames = myRuleNames.filter((ruleName) => !referenceRuleNames.includes(ruleName));
+const myCoreRules = Object.entries(myCoreRules_raw);
+const myScssRules = Object.entries(myScssRules_raw);
+
+const compareRuleLists = ({ myRules, referenceRules }, pluginName) => {
+  const myRuleNames = myRules.map(([ruleName]) => ruleName);
+
+  const nonDeprecatedReferenceRuleNames = referenceRules
+    .filter((rule) => !rule.meta?.deprecated)
+    .map(({ ruleName }) => ruleName);
+
+  const missedRuleNames = nonDeprecatedReferenceRuleNames.filter(
+    (ruleName) => !myRuleNames.includes(ruleName)
+  );
+
+  const extraneousRuleNames = myRuleNames.filter(
+    (ruleName) =>
+      !referenceRules.some((refRule) => refRule.ruleName === ruleName)
+  );
+
+  const deprecatedReferenceRuleNames = referenceRules
+    .filter((rule) => rule.meta?.deprecated)
+    .map(({ ruleName }) => ruleName);
+
+  const deprecatedRuleNames = myRuleNames.filter((ruleName) =>
+    deprecatedReferenceRuleNames.includes(ruleName)
+  );
 
   console.group(pluginName);
   console.log('missedRuleNames', missedRuleNames);
   console.log('extraneousRuleNames', extraneousRuleNames);
+  console.log('deprecatedRuleNames', deprecatedRuleNames);
   console.groupEnd(pluginName);
 };
 
-const referenceCoreRuleNames = Object.keys(referenceCoreRules);
-const myCoreRuleNames = Object.keys(myCoreRules);
+compareRuleLists(
+  {
+    myRules: myCoreRules,
+    referenceRules: referenceCoreRules,
+  },
+  'core'
+);
 
-compareRuleLists({
-  myRuleNames: myCoreRuleNames,
-  referenceRuleNames: referenceCoreRuleNames,
-}, 'core');
-
-const referenceScssRuleNames = referenceScssRules.map(({ ruleName }) => ruleName);
-const myScssRuleNames = Object.keys(myScssRules);
-
-compareRuleLists({
-  myRuleNames: myScssRuleNames,
-  referenceRuleNames: referenceScssRuleNames,
-}, 'scss');
+compareRuleLists(
+  {
+    myRules: myScssRules,
+    referenceRules: referenceScssRules,
+  },
+  'scss'
+);

@@ -112,7 +112,7 @@ module.exports.rules = {
     true,
     {
       ignore: 'custom-properties',
-    }
+    },
   ],
   linebreaks: null,
   'max-empty-lines': 1,
