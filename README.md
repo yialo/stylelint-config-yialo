@@ -10,18 +10,21 @@ npm install -DE stylelint-config-yialo
 yarn add stylelint-config-yialo -DE
 ```
 
+```shell
+pnpm add -DE stylelint-config-yialo
+```
+
 ## Usage
 
 This package contains three different rulesets for [Stylelint](https://github.com/stylelint/stylelint):
 
-* `base`: for plain CSS and CSS Modules
-* `scss`: for SCSS syntax only
+- `base`: for CSS only
+- `scss`: for both CSS and SCSS
 
-If you've installed `stylelint-config-yialo` locally within your project, declare your stylelint config extension. Example of full ruleset usage:
+If you've installed `stylelint-config-yialo` locally within your project, declare your stylelint config extension. For example,
 
 ```yaml
 ---
 extends:
-  - stylelint-config-yialo/base
   - stylelint-config-yialo/scss
 ```
