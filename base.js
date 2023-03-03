@@ -1,9 +1,9 @@
 'use strict';
 
+const { reports } = require('./partials');
 const { rules } = require('./rules/core');
 
 module.exports = {
-  reportInvalidScopeDisables: true,
-  reportNeedlessDisables: true,
+  ...reports,
   rules,
 };
