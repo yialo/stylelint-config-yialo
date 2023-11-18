@@ -29,6 +29,6 @@
   "scripts": {
     "check-rules": "node ./fixtures/compare-rule-lists.js",
     "test-css": "stylelint --config base.js fixtures/test-bed.css",
-    "test-scss": "stylelint --config scss.js fixtures/test-bed.scss"
+    "test-scss": "stylelint --config scss.js fixtures/test-bed-scss"
   }
 }

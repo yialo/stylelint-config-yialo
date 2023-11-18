@@ -1,0 +1,16 @@
+@use 'partial';
+@import 'block';
+
+$color-red: red;
+
+.block {
+  color: $color-red !important;
+}
+
+$breakpoint-md: 700px;
+
+@media (min-width: $breakpoint-md) {
+  .block {
+    color: $color-red !important;
+  }
+}
