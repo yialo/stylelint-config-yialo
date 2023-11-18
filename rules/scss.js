@@ -2,7 +2,7 @@
 
 const coreRules = require('./core.js').rules;
 
-module.exports.rules = {
+const ownRules = {
   'scss/at-each-key-value-single-line': null,
   'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
   'scss/at-else-closing-brace-space-after': 'always-intermediate',
@@ -15,7 +15,6 @@ module.exports.rules = {
   'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
   'scss/at-if-closing-brace-space-after': 'always-intermediate',
   'scss/at-if-no-null': null,
-  'scss/at-import-no-partial-leading-underscore': null,
   'scss/at-import-partial-extension-blacklist': null,
   'scss/at-import-partial-extension-whitelist': null,
   'scss/at-import-partial-extension': null,
@@ -23,10 +22,11 @@ module.exports.rules = {
   'scss/at-mixin-named-arguments': null,
   'scss/at-mixin-parentheses-space-before': 'never',
   'scss/at-mixin-pattern': null,
+  'scss/at-root-no-redundant': true,
   'scss/at-rule-conditional-no-parentheses': null,
-  'scss/at-rule-no-unknown': null,
+  'scss/at-use-no-redundant-alias': true,
   'scss/at-use-no-unnamespaced': null,
-  'scss/comment-no-empty': null,
+  'scss/block-no-redundant-nesting': null,
   'scss/comment-no-loud': null,
   'scss/declaration-nested-properties-no-divided-groups': null,
   'scss/declaration-nested-properties': null,
@@ -44,10 +44,12 @@ module.exports.rules = {
   'scss/double-slash-comment-empty-line-before': null,
   'scss/double-slash-comment-inline': null,
   'scss/double-slash-comment-whitespace-inside': null,
+  'scss/function-calculation-no-interpolation': null,
   'scss/function-color-relative': null,
-  'scss/function-no-unknown': coreRules['function-no-unknown'],
+  'scss/function-disallowed-list': null,
   'scss/function-quote-no-quoted-strings-inside': null,
   'scss/function-unquote-no-unquoted-strings-inside': null,
+  'scss/load-no-partial-leading-underscore': true,
   'scss/map-keys-quotes': null,
   'scss/media-feature-value-dollar-variable': null,
   'scss/no-dollar-variables': null,
@@ -62,4 +64,55 @@ module.exports.rules = {
   'scss/selector-nest-combinators': null,
   'scss/selector-no-redundant-nesting-selector': true,
   'scss/selector-no-union-class-name': null,
+};
+
+const coreRuleNamesNeedAdaptation = {
+  toExtend: [
+    'at-rule-no-unknown',
+    'comment-no-empty',
+    'function-no-unknown',
+    'property-no-unknown',
+  ],
+  toAdjust: [
+    'declaration-property-value-no-unknown',
+    'media-query-no-invalid',
+    'no-invalid-position-at-import-rule',
+  ],
+};
+
+const extensibleCoreRuleNameEnum = Object.fromEntries(
+  coreRuleNamesNeedAdaptation.toExtend.map((ruleName) => [ruleName, ruleName])
+);
+const adjustableCoreRuleNameEnum = Object.fromEntries(
+  coreRuleNamesNeedAdaptation.toAdjust.map((ruleName) => [ruleName, ruleName])
+);
+
+const extensionRules = {
+  'scss/at-rule-no-unknown':
+    coreRules[extensibleCoreRuleNameEnum['at-rule-no-unknown']],
+  'scss/comment-no-empty':
+    coreRules[extensibleCoreRuleNameEnum['comment-no-empty']],
+  'scss/function-no-unknown':
+    coreRules[extensibleCoreRuleNameEnum['function-no-unknown']],
+  'scss/property-no-unknown':
+    coreRules[extensibleCoreRuleNameEnum['property-no-unknown']],
+};
+
+module.exports.coreRulesAdaptedForScssPlugin = {
+  ...Object.fromEntries(
+    coreRuleNamesNeedAdaptation.toExtend.map((ruleName) => [ruleName, null])
+  ),
+  [adjustableCoreRuleNameEnum['declaration-property-value-no-unknown']]: null,
+  [adjustableCoreRuleNameEnum['no-invalid-position-at-import-rule']]: [
+    coreRules[adjustableCoreRuleNameEnum['no-invalid-position-at-import-rule']],
+    {
+      ignoreAtRules: ['use', 'forward'],
+    },
+  ],
+  [adjustableCoreRuleNameEnum['media-query-no-invalid']]: null,
+};
+
+module.exports.rules = {
+  ...ownRules,
+  ...extensionRules,
 };

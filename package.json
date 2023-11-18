@@ -6,10 +6,10 @@
     "url": "https://github.com/yialo/stylelint-config-yialo/issues"
   },
   "peerDependencies": {
-    "postcss": "~8.4.21",
-    "postcss-scss": "~4.0.6",
-    "stylelint": "~15.2.0",
-    "stylelint-scss": "~4.4.0"
+    "postcss": "~8.4.31",
+    "postcss-scss": "~4.0.9",
+    "stylelint": "~15.11.0",
+    "stylelint-scss": "~5.3.1"
   },
   "description": "Yialo's Stylelint config",
   "homepage": "https://github.com/yialo/stylelint-config-yialo#readme",
@@ -29,6 +29,6 @@
   "scripts": {
     "check-rules": "node ./fixtures/compare-rule-lists.js",
     "test-css": "stylelint --config base.js fixtures/test-bed.css",
-    "test-scss": "stylelint --config scss.js fixtures/test-bed.scss"
+    "test-scss": "stylelint --config scss.js fixtures/test-bed-scss"
   }
 }

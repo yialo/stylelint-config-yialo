@@ -1,7 +1,7 @@
 'use strict';
 
 const { rules: referenceCoreRules_raw } = require('stylelint');
-const { default: referenceScssRules_raw } = require('stylelint-scss');
+const referenceScssRulePlugins = require('stylelint-scss');
 
 const { rules: myCoreRules_raw } = require('../rules/core');
 const { rules: myScssRules_raw } = require('../rules/scss');
@@ -12,7 +12,7 @@ const referenceCoreRules = Object.keys(referenceCoreRules_raw).map(
     return require(ruleFilePath);
   }
 );
-const referenceScssRules = referenceScssRules_raw.map(({ rule }) => rule);
+const referenceScssRules = referenceScssRulePlugins.map(({ rule }) => rule);
 
 const myCoreRules = Object.entries(myCoreRules_raw);
 const myScssRules = Object.entries(myScssRules_raw);

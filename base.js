@@ -3,7 +3,9 @@
 const { reports } = require('./partials');
 const { rules } = require('./rules/core');
 
-module.exports = {
+const baseConfig = {
   ...reports,
   rules,
 };
+
+module.exports = baseConfig;
